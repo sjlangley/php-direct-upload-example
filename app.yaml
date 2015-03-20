@@ -1,0 +1,12 @@
+application: php-uploads
+version: 1
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /handle_upload
+  script: handle_upload.php
+
+- url: .*
+  script: direct_upload.php
